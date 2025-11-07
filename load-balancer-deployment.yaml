@@ -14,8 +14,7 @@ spec:
     spec:
       containers:
       - name: flask-load-balancer
-        # TODO: Replace <DockerHub-Username> with your Docker Hub username, and use the appropriate image name and tag
-        image: <DockerHub-Username>/<load-balancer-image-name>:<load-balancer-image-tag>
+        image: cynthiai/mlip-lab-loadbalancer:1.0.2
         ports:
         - containerPort: 8080
 ---

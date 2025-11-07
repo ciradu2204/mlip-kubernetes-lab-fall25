@@ -50,17 +50,18 @@ def train_model():
         
         # TODO: Train model to predict Y given X
         # you can use any model but we suggest (and import) RandomForestRegressor
-        model = ...
-        
+        model = RandomForestRegressor()
+        model.fit(X, y)
+
         # Save model and metadata
         model_info = {
             'model': model,
             'feature_names': list(X.columns),
             'training_time': datetime.now().isoformat()
         }
-        
+    
         joblib.dump(model_info, '/shared-volume/model.joblib') # TODO: replace this
-        
+    
         print(f"[{datetime.now()}] Model trained and saved")
             
         return True
